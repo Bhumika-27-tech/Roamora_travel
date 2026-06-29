@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roamora Travel Admin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+<header class="site-header">
+  <a class="brand" href="index.html">
+  <img class="brand-logo" src="assets/roamora-logo.png" alt="Roamora Travel logo">
+  <span>Roamora Travel</span>
+</a>
+  <nav class="main-nav">
+    <a href="index.html">View Website</a>
+</nav>
+  </header>
+<main>
+<section class="admin-wrap" id="admin">
+  <div class="login-panel" id="loginPanel">
+    <p class="eyebrow">Admin access</p>
+<h2>Roamora Control Room</h2>
+    <p>Demo login: admin@roamora.com / roamora123</p>
+    <form id="adminLoginForm">
+      <label>
+<span>Email</span>
+        <input id="adminEmail" type="email" value="admin@roamora.com">
+      </label>
+      <label>
+        <span>Password</span>
+        <input id="adminPassword" type="password" value="roamora123">
+</label>
+        <button>Open Dashboard</button>
+      </form>
+    </div>
+      <div class="dashboard hidden" id="adminDashboard">
+        <aside>
+        <div class="brand">
+<img class="brand-logo" src="assets/roamora-logo.png" alt="Roamora Travel logo">
+          <span>Roamora Admin</span>
+</div>
+          <button class="active" data-tab="overview">Overview</button>
+          <button data-tab="destinationsAdmin">Destinations</button>
+          <button data-tab="packagesAdmin">Packages</button>
+          <button data-tab="bookingsAdmin">Bookings</button>
+<button data-tab="supportAdmin">Support</button>
+          <button data-tab="contentAdmin">Content</button
+            >
+<button data-tab="reviewsAdmin">Reviews</button>
+          </aside>
+          <div class="dash-main">
+            <div class="dash-top">
+              <h2 id="adminTitle">Overview</h2>
+              <button id="logoutBtn" type="button">Log Out</button>
+            </div>
+<section class="tab active" id="overview">
+              <div class="dash-stats">
+<div>
+<span>Total bookings</span>
+                <b id="statBookings">0</b>
+</div>
+                <div>
+<span>Total revenue</span>
+                  <b id="statRevenue">Rs.0</b>
+                </div>
+                <div>
+                  <span>Pending inquiries</span>
+                  <b id="statPending">0</b>
+                </div>
+                <div>
+                  <span>Popular destination</span>
+                  <b id="statPopular">Bali</b>
+                </div>
+              </div>
+<div class="admin-card">
+                <h3>Recent inquiries</h3>
+                <table>
+                  <thead>
+                    <tr>
+<th>Name</th>
+                      <th>Destination</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                    </tr>
+</thead>
+                    <tbody id="recentBookings">
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section class="tab" id="destinationsAdmin">
+                <div class="admin-card">
+                  <h3>Add destination</h3>
+                  <form class="admin-form" id="destinationForm">
+                    <input id="destName" required placeholder="Name">
+                    <input id="destType" required placeholder="Type">
+                    <input id="destSeason" required placeholder="Season">
+                    <input id="destDays" type="number" required placeholder="Days">
+                    <input id="destPrice" type="number" required placeholder="Price">
+                    <input id="destImage" required placeholder="Image URL">
+                    <button>Add Destination</button>
+                  </form>
+                </div>
+                <div id="adminDestinationList" class="admin-list">
+                </div>
+              </section>
+            <section class="tab" id="packagesAdmin">
+              <div class="admin-card">
+                <h3>Add package</h3>
+                <form class="admin-form" id="packageForm">
+                  <input id="pkgName" required placeholder="Package name">
+                  <input id="pkgDestination" required placeholder="Destination">
+                  <input id="pkgDays" type="number" required placeholder="Days">
+                  <input id="pkgPrice" type="number" required placeholder="Price">
+                  <input id="pkgOffer" placeholder="Offer">
+                  <button>Add Package</button>
+                </form>
+              </div>
+              <div id="adminPackageList" class="admin-list">
+              </div>
+            </section>
+            <section class="tab" id="bookingsAdmin">
+              <div class="admin-card">
+                <h3>Manage bookings and inquiries</h3>
+                <div id="adminBookingList" class="admin-list">
+                </div>
+              </div>
+              </section>
+              <section class="tab" id="contentAdmin">
+                <div class="admin-card">
+                  <h3>Website content</h3>
+                  <form class="admin-form stacked" id="contentForm">
+                    <label>
+                      <span>Homepage headline</span>
+                      <input id="contentHeadline" value="Explore the World, One Journey at a Time">
+                    </label>
+                    <label>
+                      <span>About text</span>
+                      <textarea id="contentAbout" rows="4">Roamora Travel helps travelers compare destinations, choose curated packages, and send booking inquiries without friction.</textarea>
+                    </label>
+                    <label>
+                      <span>FAQ</span>
+                      <textarea rows="4">Can I customize a package? Yes, all Roamora packages can be tailored.</textarea>
+                    </label>
+                    <button>Save Content</button>
+                  </form>
+                </div>
+              </section>
+              <section class="tab" id="reviewsAdmin">
+                <div class="admin-card">
+                  <h3>Manage testimonials</h3>
+                  <form class="admin-form" id="reviewForm">
+                    <input id="reviewName" required placeholder="Customer name">
+                    <input id="reviewTrip" required placeholder="Trip">
+                    <input id="reviewText" required placeholder="Review">
+                    <button>Add Review</button>
+                  </form>
+                </div>
+                <div id="adminReviewList" class="admin-list">
+                </div>
+              </section>
+
+<section class="tab" id="supportAdmin">
+  <div class="admin-card">
+    <div class="admin-section-heading">
+      <div><h3>Customer support inbox</h3><p>Read complaints, reply to customers, and update ticket status.</p></div>
+      <span class="ticket-count" id="openTicketCount">0 open</span>
+    </div>
+    <div class="admin-list" id="adminSupportList"></div>
+  </div>
+</section>
+            </div>
+          </div>
+        </section>
+      </main>
+<div class="toast" id="toast">
+</div>
+<script src="admin.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roamora Travel</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="#home">
+<img class="brand-logo" src="assets/roamora-logo.png" alt="Roamora Travel logo">
+<span>Roamora Travel</span>
+</a>
+<button class="nav-toggle" type="button">Menu</button>
+<nav class="main-nav">
+<a href="#home">Home</a>
+<a href="#destinations">Destinations</a>
+<a href="#packages">Packages</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#support">Support</a>
+</nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-shade">
+</div>
+<div class="hero-content">
+    <p class="eyebrow">Where every journey has an aura.</p>
+    <h1>Explore the World, One Journey at a Time</h1>
+    <p>Discover premium escapes, adventure routes, family holidays, and custom travel packages planned with care from the first search to the final sunset.</p>
+<form class="search-panel" id="tripSearch">
+<label>
+<span>Location</span>
+<input id="searchLocation" type="search" placeholder="Bali, Dubai, Kerala">
+</label>
+<label>
+<span>Dates</span>
+<input type="date">
+</label>
+<label>
+<span>Travelers</span>
+<input type="number" min="1" value="2">
+</label>
+<label>
+<span>Budget</span>
+<select id="searchBudget">
+<option value="all">Any budget</option>
+<option value="80000">Under Rs.80,000</option>
+<option value="150000">Under Rs.1,50,000</option>
+<option value="250000">Under Rs.2,50,000</option>
+</select>
+</label>
+<button>Search Trips</button>
+</form>
+</div>
+</section>
+<section class="stats">
+<div>
+<b>48+</b>
+<span>Destinations</span>
+</div>
+<div>
+<b>12k</b>
+<span>Happy travelers</span>
+</div>
+<div>
+<b>24/7</b>
+<span>Support</span>
+</div>
+<div>
+<b>4.9</b>
+  <span>Guest rating</span>
+</div>
+</section>
+<section class="section" id="destinations">
+  <div class="section-head">
+  <p class="eyebrow">Featured destinations</p>
+<h2>Places that feel unforgettable</h2>
+<p>Filter by travel mood, price, duration, and season.</p>
+</div>
+<div class="filters">
+<select id="typeFilter">
+<option value="all">All types</option>
+<option>Beach</option>
+<option>Adventure</option>
+<option>Culture</option>
+<option>Luxury</option>
+</select>
+<select id="priceFilter">
+<option value="all">All prices</option>
+<option value="90000">Under Rs.90,000</option>
+<option value="150000">Under Rs.1,50,000</option>
+<option value="250000">Under Rs.2,50,000</option>
+</select>
+<select id="durationFilter">
+<option value="all">Any duration</option>
+<option value="5">Up to 5 days</option>
+<option value="7">Up to 7 days</option>
+<option value="10">Up to 10 days</option>
+</select>
+<select id="seasonFilter">
+<option value="all">All seasons</option>
+<option>Summer</option>
+<option>Winter</option>
+<option>Monsoon</option>
+<option>Spring</option>
+</select>
+</div>
+<div class="card-grid" id="destinationGrid">
+</div>
+</section>
+<section class="section band" id="packages">
+<div class="section-head">
+<p class="eyebrow">Popular packages</p>
+<h2>Ready-made trips with room for you</h2>
+<p>Each package includes stays, experiences, transfers, and expert planning.</p>
+</div>
+<div class="package-grid" id="packageGrid">
+</div>
+</section>
+<section class="section split" id="about">
+<div class="about-img">
+</div>
+<div>
+<p class="eyebrow">About Roamora</p>
+<h2>Thoughtful travel planning for every kind of explorer</h2>
+<p class="about-text">Roamora Travel helps travelers compare destinations, choose curated packages, and send booking inquiries without friction.</p>
+<ul>
+<li>Custom itineraries for couples, families, groups, and solo travelers</li>
+<li>Transparent pricing with seasonal offers and clear inclusions</li>
+<li>Local experience partners across beach, city, mountain, and culture trips</li>
+</ul>
+</div>
+</section>
+<section class="section dark">
+<div class="section-head">
+<p class="eyebrow">Guest stories</p>
+  <h2>Travelers trust Roamora</h2>
+</div>
+<div class="testimonial-grid" id="testimonialGrid">
+  </div>
+</section>
+<section class="section" id="booking">
+<div class="section-head">
+<p class="eyebrow">Booking inquiry</p>
+  <h2>Start planning your trip</h2>
+<p>Send your trip idea and the team will respond with a tailored travel plan.</p>
+</div>
+<form class="booking-form" id="bookingForm">
+<label>
+<span>Full name</span>
+<input id="guestName" required placeholder="Your name">
+</label>
+<label>
+<span>Email</span>
+<input id="guestEmail" type="email" required placeholder="you@example.com">
+</label>
+<label>
+<span>Destination</span>
+<input id="guestDestination" required placeholder="Where do you want to go?">
+</label>
+<label>
+<span>Travel date</span>
+<input id="guestDate" type="date" required>
+</label>
+<label>
+<span>Travelers</span>
+<input id="guestTravelers" type="number" min="1" value="2" required>
+</label>
+<label>
+<span>Budget</span>
+<input id="guestBudget" placeholder="Rs.1,20,000">
+</label>
+<label class="wide">
+<span>Message</span>
+<textarea id="guestMessage" rows="4" placeholder="Tell us about your travel style">
+</textarea>
+</label>
+<button>Send Inquiry</button>
+</form>
+</section>
+<section class="section contact" id="contact">
+<div>
+<p class="eyebrow">Contact</p>
+<h2>Talk to a travel specialist</h2>
+<p>Phone: +91 98765 43210</p>
+<p>Email: hello@roamoratravel.com</p>
+<p>Address: MG Road, Bengaluru, India</p>
+</div>
+<form class="newsletter" id="newsletterForm">
+<h3>Get fresh trip ideas</h3>
+<p>Join the Roamora newsletter for seasonal offers and destination picks.</p>
+<div>
+<input type="email" required placeholder="Email address">
+<button>Subscribe</button>
+</div>
+</form>
+</section>
+
+<section class="section support-section" id="support">
+  <div class="section-head">
+    <p class="eyebrow">Customer support</p>
+    <h2>Tell us what went wrong</h2>
+    <p>Raise a support ticket and use your email address to check the admin response.</p>
+  </div>
+  <div class="support-layout">
+    <form class="support-form" id="supportForm">
+      <label><span>Full name</span><input id="supportName" required placeholder="Your name"></label>
+      <label><span>Email</span><input id="supportEmail" type="email" required placeholder="you@example.com"></label>
+      <label><span>Category</span><select id="supportCategory"><option>Booking issue</option><option>Payment question</option><option>Package change</option><option>Service complaint</option><option>Other</option></select></label>
+      <label class="wide"><span>Complaint or question</span><textarea id="supportMessage" rows="5" required placeholder="Explain the issue clearly"></textarea></label>
+      <button type="submit">Submit Support Ticket</button>
+    </form>
+    <div class="ticket-checker">
+      <h3>Check your replies</h3>
+      <p>Enter the same email used while submitting your complaint.</p>
+      <form id="ticketLookupForm">
+        <input id="ticketLookupEmail" type="email" required placeholder="you@example.com">
+        <button type="submit">Find My Tickets</button>
+      </form>
+      <div class="customer-ticket-list" id="customerTicketList">
+        <p class="empty-state">Your support conversations will appear here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div>
+<a class="brand" href="#home">
+<img class="brand-logo" src="assets/roamora-logo.png" alt="Roamora Travel logo">
+  <span>Roamora Travel</span>
+</a>
+<p class="footer-tagline">Where every journey has an aura.</p>
+<p>Premium travel discovery and booking support for memorable escapes.</p>
+</div>
+<div>
+<h3>Explore</h3>
+<a href="#destinations">Destinations</a>
+<a href="#packages">Packages</a>
+<a href="#booking">Booking</a>
+<a href="#support">Support</a>
+</div>
+<div>
+<h3>Company</h3>
+<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
+</div>
+<div>
+<h3>Social</h3>
+<a href="https://www.instagram.com/">Instagram</a>
+<a href="https://www.facebook.com/">Facebook</a>
+<a href="https://www.linkedin.com/">LinkedIn</a>
+</div>
+</footer>
+
+<div class="modal hidden" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel">
+    <button class="modal-close" type="button" data-close-modal aria-label="Close details">X</button>
+    <img id="detailsImage" alt="Travel destination">
+    <div class="modal-content">
+      <p class="eyebrow" id="detailsEyebrow">Roamora experience</p>
+      <h2 id="detailsTitle">Trip details</h2>
+      <p id="detailsDescription"></p>
+      <div class="detail-facts" id="detailsFacts"></div>
+      <h3>What is included</h3>
+      <ul id="detailsIncludes"></ul>
+      <div class="card-actions">
+        <button type="button" id="modalBookButton">Book This Trip</button>
+        <button type="button" class="ghost" data-close-modal>Continue Browsing</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+</div>
+<script src="public.js">
+</script>
+</body>
+</html>
